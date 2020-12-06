@@ -78,12 +78,6 @@ install_woocommerce() {
     php -r "copy('https://getcomposer.org/download/1.10.17/composer.phar', 'composer.phar');"
 
     if [[ ! $WC_VERSION == 'latest' ]]; then
-      # If we use php 5.3, we have problem with warning: CRLF will be replaced by LF in tests/legacy/unit-tests/importer/sample_update_product.csv.
-      # The solution is to remove this file, because we don't use it.
-      if [[ $PHP_VERSION == 5.3 ]]; then
-        rm -R tests/legacy/unit-tests/importer/sample_update_product.csv
-      fi
-
       git checkout $WC_VERSION
 
       version=($(echo $WC_VERSION | tr "." "\n"))
