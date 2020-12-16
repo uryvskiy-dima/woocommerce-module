@@ -1,5 +1,6 @@
-FILE = $(TRAVIS_BUILD_DIR)/VERSION
-VERSION = `cat $(FILE)`
+ROOT_DIR=$(shell dirname $(realpath $(lastword $(MAKEFILE_LIST))))
+VERSION = `cat $(ROOT_DIR)/VERSION`
+ARCHIVE_NAME = '/tmp/retailcrm-'$(VERSION)'.ocmod.zip'
 
 .PHONY: test
 
@@ -43,4 +44,6 @@ run_tests:
 coverage:
 	wget https://phar.phpunit.de/phpcov-2.0.2.phar && php phpcov-2.0.2.phar merge coverage/ --clover coverage.xml
 
+build_archive:
+	zip -r $(ARCHIVE_NAME) ./src/*
 
