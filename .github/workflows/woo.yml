@@ -67,7 +67,7 @@ jobs:
           bash <(curl -s https://codecov.io/bash)
   deploy:
     needs: ['test']
-    if: success() && github.event_name == 'push' && github.repository_owner == 'retailcrm' && github.ref == 'refs/heads/master'
+    # if: success() && github.event_name == 'push' && github.repository_owner == 'retailcrm' && github.ref == 'refs/heads/master'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
