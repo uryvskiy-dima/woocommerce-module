@@ -394,10 +394,6 @@ jobs:
             wc: '3.9.0'
             phpunit-version: 'phpunit:6.4.3'
 
-          - php-version: '7.0'
-            wp: 'latest'
-            wc: 'latest'
-            phpunit-version: 'phpunit:6.4.3'
           - php-version: '7.2'
             wp: 'latest'
             wc: 'latest'
