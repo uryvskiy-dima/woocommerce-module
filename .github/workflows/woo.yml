@@ -398,10 +398,6 @@ jobs:
             wp: 'latest'
             wc: 'latest'
             phpunit-version: 'phpunit:6.4.3'
-          - php-version: '7.3'
-            wp: 'latest'
-            wc: 'latest'
-            phpunit-version: 'phpunit:6.4.3'
     services:
       mysql:
         image: mysql:5.7
