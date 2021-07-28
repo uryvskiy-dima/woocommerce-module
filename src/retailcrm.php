@@ -20,6 +20,8 @@ if (!class_exists( 'WC_Integration_Retailcrm')) :
 
     /**
      * Class WC_Integration_Retailcrm
+     *
+     * @codeCoverageIgnore
      */
     class WC_Integration_Retailcrm {
         const WOOCOMMERCE_SLUG = 'woocommerce';
@@ -125,7 +127,6 @@ if (!class_exists( 'WC_Integration_Retailcrm')) :
             require_once(self::checkCustomFile('include/class-wc-retailcrm-base.php'));
             require_once(self::checkCustomFile('include/class-wc-retailcrm-uploader.php'));
             require_once(self::checkCustomFile('include/functions.php'));
-
         }
 
         /**
