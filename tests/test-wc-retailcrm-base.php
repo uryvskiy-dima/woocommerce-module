@@ -188,7 +188,7 @@ class WC_Retailcrm_Base_Test extends WC_Retailcrm_Test_Case_Helper
         $this->assertNotEquals('This option is disabled', $cronInfo['icml']);
         $this->assertEquals('This option is disabled', $cronInfo['inventories']);
 
-        ob_end_end();
+        ob_end_clean();
     }
 
     private function setMockOrderMethods()
